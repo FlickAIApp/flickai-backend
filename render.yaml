@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flickai-backend
+    env: python
+    plan: starter
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
